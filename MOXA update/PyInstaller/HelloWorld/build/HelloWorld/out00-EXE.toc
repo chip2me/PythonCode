@@ -1,0 +1,9 @@
+('C:\\Users\\Carsten\\Documents\\Projekter\\Moxa\\PyInstaller\\HelloWorld\\dist\\HelloWorld.exe',
+ True,
+ False,
+ None,
+ None,
+ [],
+ None,
+ False,
+ 1382085290L)

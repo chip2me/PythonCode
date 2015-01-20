@@ -1,0 +1,9 @@
+('C:\\Users\\Carsten\\Documents\\Projekter\\Moxa\\PyInstaller\\moxa_setup\\dist\\moxa_setup.exe',
+ True,
+ False,
+ None,
+ None,
+ [],
+ None,
+ False,
+ 1382449212L)

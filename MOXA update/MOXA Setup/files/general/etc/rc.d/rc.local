@@ -1,0 +1,3 @@
+# !/bin/sh
+# Add you want to run daemon
+/root/comserver &

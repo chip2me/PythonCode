@@ -1,0 +1,2 @@
+call isdhcp.exe
+pause

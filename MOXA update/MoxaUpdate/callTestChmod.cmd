@@ -1,0 +1,2 @@
+call TestChmod.py
+pause

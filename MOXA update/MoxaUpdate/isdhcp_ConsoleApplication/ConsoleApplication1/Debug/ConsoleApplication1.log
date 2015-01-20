@@ -1,0 +1,17 @@
+﻿Build started 18-10-2013 15:13:04.
+     1>Project "C:\Users\Carsten\Documents\Projekter\Moxa\MoxaUpdate\isdhcp_ConsoleApplication\ConsoleApplication1\ConsoleApplication1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\isdhcp.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication1.cpp
+         ConsoleApplication1.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Carsten\Documents\Projekter\Moxa\MoxaUpdate\isdhcp_ConsoleApplication\Debug\isdhcp.exe" /INCREMENTAL /NOLOGO /LTCG:STATUS /ALLOWBIND kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Carsten\Documents\Projekter\Moxa\MoxaUpdate\isdhcp_ConsoleApplication\Debug\isdhcp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 Debug\ConsoleApplication1.obj
+         Debug\stdafx.obj
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+     1>ConsoleApplication1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+         ConsoleApplication1.vcxproj -> C:\Users\Carsten\Documents\Projekter\Moxa\MoxaUpdate\isdhcp_ConsoleApplication\Debug\isdhcp.exe
+     1>Done Building Project "C:\Users\Carsten\Documents\Projekter\Moxa\MoxaUpdate\isdhcp_ConsoleApplication\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.57
