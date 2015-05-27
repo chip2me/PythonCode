@@ -16,7 +16,7 @@
 #* Name     :                                                                *#
 #* OrderNr. :                                                                *#
 #* Descr.   : Lifting application JOG UP/DOWN including Brake management.    *#
-#* History  : Cyclic CW/CCW playground                                       *#
+#* History  : Cyclic CW/CCW playground.                                      *#
 #*===========================================================================*#
 from _pymc_builtins_ import *          # Import for simulation on PC
 
