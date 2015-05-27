@@ -5,4 +5,4 @@ test = 0
 check(test)
 
 
-input("\nPress<enter>")
+input("\nPrez<enter>")

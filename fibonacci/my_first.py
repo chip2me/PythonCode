@@ -13,3 +13,5 @@ def first(n):
 print("\nStart fib first")
 first(1000)
 # This is a commented out line: input(Press<enter>")
+
+input("Press<enter>")

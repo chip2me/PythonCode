@@ -21,11 +21,11 @@ def fib2(n):
         
 
 print("\nStart fib1")
-fib1(50)
+fib1(1000)
 print("Stop")
 
 print("\nStart fib2")
-fib2(50)
+fib2(1000)
 print("Stop")
 
 

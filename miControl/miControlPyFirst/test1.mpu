@@ -1,0 +1,334 @@
+# -*- coding: iso-8859-1 -*-
+#==============================================================================
+#                Copyright (c) 1997-2015 by miControl (R). All rights reserved.
+#
+# SrcFile  : test1.py
+# DestrFile: test1.mpu
+#
+# System   : MPU2 (Motion Process Unit) V2.00.00.00
+# Company  : miControl (R)
+# Compiler : pymc V1.01.00.09
+#
+# Date Time: 22.05.2015 12:49:00
+#==============================================================================
+# Description:   py2mpu-compiler (pymc) generated file         !! DON'T EDIT !!
+#==============================================================================
+
+from mc.mpu2 import *                         # Motion Process Unit
+
+_FileFormat_      = 0x00000001
+_FileCrc32_       = 0x9094AA62
+
+_CompilerVersion_ = 0x01010009
+_CompilerFlags_   = 0x00000000
+
+_MpuVersion_      = 0x02000005
+_MpuFlags_        = 0x00000000
+
+#------------------------------------------------------------------------------
+def MpuProgram (m=None):
+
+   if m == None:
+      m = Mpu()
+
+
+   #- GlobalVar's -------------------------------------------------------------
+
+   g = m.GlobalVars
+
+   g.AppId = m.Var(1)
+   g.AppVersion = m.Var(16777216)
+   g.Cmd = m.Var(0)
+   g.InputFilterTime = m.Var(10)
+   g.State = m.Var(0)
+   g.LastState = m.Var(0)
+   g.LastCmd = m.Var(0)
+   g.LastDin = m.Var(0)
+   g.din = m.Var()
+   g.counter = m.Var(0)
+   g.error = m.Var()
+
+
+   #- MPU-Program -------------------------------------------------------------
+
+
+   m.Jmp ("_L0_OVER_FUNC_")
+   m.Label ("_L1_FUNC_NextState_")           # NextState BEGIN
+   m.Mov (g.LastState, g.State)
+   m.Mov (g.State, m.BP(-8))
+   m.Ret (4)                                 # NextState END
+   # Local symbols of NextState:
+   #    VAR   state      [ BP(-8) ]
+   m.Label ("_L0_OVER_FUNC_")
+
+
+   m.Jmp ("_L2_OVER_FUNC_")
+   m.Label ("_L3_FUNC_DigitalInputFilter_")  # DigitalInputFilter BEGIN
+   m.Mov (m.BP(0), m.Par(0x3120,0x00))
+
+   m.Cmpneq (Reg1, m.BP(0), m.BP(-8))
+   m.Jz ("_L4_IF_END_", Reg1)
+   m.Clock (m.BP(4))
+
+   m.Label ("_L6_WHILE_BEGIN_")
+   m.DiffClock (Reg1, m.BP(4))
+   m.Cmpl (Reg2, Reg1, g.InputFilterTime)
+   m.Jz ("_L7_WHILE_ELSE_", Reg2)
+   m.Mov (m.BP(8), m.Par(0x3120,0x00))
+
+   m.Cmpneq (Reg1, m.BP(0), m.BP(8))
+   m.Jz ("_L9_IF_END_", Reg1)
+   m.Jmp ("_L8_WHILE_END_")
+
+   m.Label ("_L9_IF_END_")
+
+   m.Jmp ("_L6_WHILE_BEGIN_")
+
+   m.Label ("_L7_WHILE_ELSE_")
+   m.Mov (m.BP(-8), m.BP(0))
+
+   m.Label ("_L8_WHILE_END_")
+
+   m.Label ("_L4_IF_END_")
+
+   m.Ret (4, m.BP(-8))                       # DigitalInputFilter END
+   # Local symbols of DigitalInputFilter:
+   #    VAR   din        [ BP(0) ]
+   #    VAR   last_din   [ BP(-8) ]
+   #    VAR   new_din    [ BP(8) ]
+   #    VAR   time_start [ BP(4) ]
+   m.Label ("_L2_OVER_FUNC_")
+
+
+   m.Jmp ("_L11_OVER_FUNC_")
+   m.Label ("_L12_FUNC_IsBitEdgeChangeToHigh_") # IsBitEdgeChangeToHigh BEGIN
+   m.Xor (Reg1, m.BP(-12), m.BP(-16))
+   m.And (Reg2, Reg1, m.BP(-12))
+   m.And (Reg3, Reg2, m.BP(-8))
+   m.Ret (12, Reg3)                          # IsBitEdgeChangeToHigh END
+   # Local symbols of IsBitEdgeChangeToHigh:
+   #    VAR   last       [ BP(-16) ]
+   #    VAR   mask       [ BP(-8) ]
+   #    VAR   new        [ BP(-12) ]
+   m.Label ("_L11_OVER_FUNC_")
+
+
+   m.Jmp ("_L13_OVER_FUNC_")
+   m.Label ("_L14_FUNC_CheckError_")         # CheckError BEGIN
+
+   m.Jz ("_L15_IF_END_", m.Par(0x3001,0x00))
+   m.Push (6)
+   m.Call ("_L1_FUNC_NextState_")
+
+   m.Label ("_L15_IF_END_")
+
+   m.Ret ()                                  # CheckError END
+   m.Label ("_L13_OVER_FUNC_")
+
+
+   m.Jmp ("_L17_OVER_FUNC_")
+   m.Label ("_L18_FUNC_CheckInputs_")        # CheckInputs BEGIN
+   m.Push (g.LastDin)
+   m.Call ("_L3_FUNC_DigitalInputFilter_", 12, Reg1)
+   m.Mov (g.din, Reg1)
+
+   m.Cmpneq (Reg1, g.din, g.LastDin)
+   m.Jz ("_L19_IF_END_", Reg1)
+   m.And (Reg1, g.din, 15)
+   m.Mov (g.Cmd, Reg1)
+   m.Mov (g.LastDin, g.din)
+
+   m.Label ("_L19_IF_END_")
+
+   m.Ret ()                                  # CheckInputs END
+   m.Label ("_L17_OVER_FUNC_")
+
+
+   m.Jmp ("_L21_OVER_FUNC_")
+   m.Label ("_L22_FUNC_InitPars_")           # InitPars BEGIN
+   m.Mov (m.Par(0x3004,0x00), 0)
+   m.Mov (m.Par(0x3000,0x00), 1)
+   m.Mov (m.Par(0x3000,0x00), 130)
+   m.Mov (m.Par(0x3900,0x00), 1)
+   m.Mov (m.Par(0x3911,0x00), 2)
+   m.Mov (m.Par(0x3910,0x00), 4)
+   m.Mov (m.Par(0x3962,0x00), 200)
+   m.Mov (m.Par(0x3901,0x00), 4000)
+   m.Mov (m.Par(0x3902,0x00), 24000)
+   m.Mov (m.Par(0x3350,0x00), 2378)
+   m.Mov (m.Par(0x3550,0x00), 2378)
+   m.Mov (m.Par(0x3221,0x00), 2000)
+   m.Mov (m.Par(0x3223,0x00), 2000)
+   m.Mov (m.Par(0x3210,0x00), 30)
+   m.Mov (m.Par(0x3211,0x00), 30)
+   m.Mov (m.Par(0x3241,0x00), 200)
+   m.Mov (m.Par(0x3243,0x00), 200)
+   m.Mov (m.Par(0x3310,0x00), 400)
+   m.Mov (m.Par(0x3311,0x00), 50)
+   m.Mov (m.Par(0x3312,0x00), 20)
+   m.Mov (m.Par(0x3313,0x00), 2000)
+   m.Mov (m.Par(0x3314,0x00), 50)
+   m.Mov (m.Par(0x3315,0x00), 50)
+   m.Mov (m.Par(0x3317,0x00), 5)
+   m.Mov (m.Par(0x3341,0x00), 50)
+   m.Mov (m.Par(0x3343,0x00), 50)
+   m.Mov (m.Par(0x3345,0x00), 20)
+   m.Mov (m.Par(0x33C0,0x03), 7)
+   m.Mov (m.Par(0x3510,0x00), 10)
+   m.Mov (m.Par(0x3511,0x00), 1)
+   m.Mov (m.Par(0x3517,0x00), 1)
+   m.Mov (m.Par(0x3733,0x00), 10)
+   m.Mov (m.Par(0x373B,0x00), 10)
+   m.Mov (m.Par(0x3003,0x00), 7)
+   m.Ret ()                                  # InitPars END
+   m.Label ("_L21_OVER_FUNC_")
+
+   m.Label ("_L23_WHILE_BEGIN_")
+   m.Call ("_L14_FUNC_CheckError_")
+   m.Call ("_L18_FUNC_CheckInputs_")
+   m.Add (Reg1, g.counter, 1)
+   m.Mov (g.counter, Reg1)
+
+   m.Cmpeq (Reg1, g.counter, 5000)
+   m.Jz ("_L25_IF_END_", Reg1)
+   m.Mov (g.Cmd, 8)
+
+   m.Label ("_L25_IF_END_")
+
+   m.Cmpeq (Reg1, g.counter, 10000)
+   m.Jz ("_L27_IF_END_", Reg1)
+   m.Mov (g.counter, 0)
+   m.Mov (g.Cmd, 2)
+
+   m.Label ("_L27_IF_END_")
+
+   m.Cmpeq (Reg1, g.State, 0)
+   m.Jz ("_L30_IF_NEXT_", Reg1)
+   m.Call ("_L22_FUNC_InitPars_")
+   m.Push (1)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L30_IF_NEXT_")
+   m.Cmpeq (Reg2, g.State, 1)
+   m.Jz ("_L31_IF_NEXT_", Reg2)
+
+   m.Cmpneq (Reg1, g.Cmd, g.LastCmd)
+   m.Jz ("_L32_IF_END_", Reg1)
+
+   m.Cmpeq (Reg1, g.Cmd, 4)
+   m.Jz ("_L34_IF_END_", Reg1)
+   m.Push (2)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Mov (g.LastCmd, g.Cmd)
+
+   m.Label ("_L34_IF_END_")
+
+   m.Cmpeq (Reg1, g.Cmd, 8)
+   m.Jz ("_L36_IF_END_", Reg1)
+   m.Push (4)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Mov (g.LastCmd, g.Cmd)
+
+   m.Label ("_L36_IF_END_")
+
+   m.Cmpeq (Reg1, g.Cmd, 2)
+   m.Jz ("_L38_IF_END_", Reg1)
+   m.Push (7)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Mov (g.LastCmd, g.Cmd)
+
+   m.Label ("_L38_IF_END_")
+
+   m.Label ("_L32_IF_END_")
+
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L31_IF_NEXT_")
+   m.Cmpeq (Reg1, g.State, 4)
+   m.Jz ("_L40_IF_NEXT_", Reg1)
+   m.Mov (m.Par(0x3004,0x00), 1)
+   m.Mov (m.Par(0x3000,0x01), 0)
+   m.Mov (m.Par(0x3000,0x10), 777)
+   m.Mov (m.Par(0x3000,0x11), 222)
+   m.Mov (m.Par(0x3000,0x01), 52)
+   m.Push (5)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L40_IF_NEXT_")
+   m.Cmpeq (Reg2, g.State, 7)
+   m.Jz ("_L41_IF_NEXT_", Reg2)
+   m.Mov (m.Par(0x3004,0x00), 1)
+   m.Mov (m.Par(0x3000,0x01), 0)
+   m.Mov (m.Par(0x3000,0x10), 999)
+   m.Mov (m.Par(0x3000,0x11), -222)
+   m.Mov (m.Par(0x3000,0x01), 52)
+   m.Push (5)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L41_IF_NEXT_")
+   m.Cmpeq (Reg2, g.State, 5)
+   m.Jz ("_L42_IF_NEXT_", Reg2)
+
+   m.And (Reg1, m.Par(0x3002,0x00), 16)
+   m.Jz ("_L43_IF_END_", Reg1)
+   m.Mov (g.Cmd, 0)
+   m.Mov (g.LastCmd, 0)
+   m.Push (1)
+   m.Call ("_L1_FUNC_NextState_")
+
+   m.Label ("_L43_IF_END_")
+
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L42_IF_NEXT_")
+   m.Cmpeq (Reg2, g.State, 6)
+   m.Jz ("_L45_IF_NEXT_", Reg2)
+
+   m.And (Reg1, m.Par(0x3002,0x00), 16)
+   m.Jz ("_L46_IF_END_", Reg1)
+   m.Mov (g.Cmd, 0)
+   m.Mov (g.LastCmd, 0)
+   m.Push (1)
+   m.Call ("_L1_FUNC_NextState_")
+
+   m.Label ("_L46_IF_END_")
+
+   m.Jmp ("_L29_IF_END_")
+
+   m.Label ("_L45_IF_NEXT_")
+   m.Cmpeq (Reg2, g.State, 6)
+   m.Jz ("_L29_IF_END_", Reg2)
+   m.Mov (g.error, m.Par(0x3001,0x00))
+
+   m.Cmpeq (Reg1, g.error, 0)
+   m.Jz ("_L51_IF_ELSE_", Reg1)
+   m.Push (1)
+   m.Call ("_L1_FUNC_NextState_")
+   m.Jmp ("_L49_IF_END_")
+
+   m.Label ("_L51_IF_ELSE_")
+   m.Mov (m.Par(0x3004,0x00), 0)
+
+   m.Cmpneq (Reg1, g.Cmd, g.LastCmd)
+   m.Cmpeq (Reg2, g.Cmd, 1)
+   m.Andl (Reg3, Reg1, Reg2)
+   m.Jz ("_L52_IF_END_", Reg3)
+   m.Mov (m.Par(0x3000,0x00), 1)
+   m.Mov (g.LastCmd, g.Cmd)
+
+   m.Label ("_L52_IF_END_")
+
+   m.Label ("_L49_IF_END_")
+
+   m.Label ("_L29_IF_END_")
+
+   m.Jmp ("_L23_WHILE_BEGIN_")
+
+   m.Label ("_L24_WHILE_END_")
+
+   return m
+
+#------------------------------------------------------------------------------
