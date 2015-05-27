@@ -152,13 +152,14 @@ def InitPars ():
 
    Sp(0x3733, 0x00, 10)               # POS_FollowingErrorTime
    Sp(0x373b, 0x00, 10)               # POS_PositionWindowTime
-   Sp(0x3003, 0x00, 7)                 # Position Mode
+   Sp(0x3003, 0x00, 7)                # Position Mode
 
 
 
 # Main program ================================================================
 
 # Main loop -------------------------------------------------------------------
+'''
 counter = 0
 while 1:
    CheckError()                              # Error check at each loop cycle
@@ -234,3 +235,4 @@ while 1:
          if (Cmd != LastCmd) and (Cmd == CMD_BIT_ClearError):
             Sp(0x3000,0,1)                   # Clear error
             LastCmd = Cmd                    # Retry until solved ...
+   '''
