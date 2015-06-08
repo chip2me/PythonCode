@@ -1,6 +1,8 @@
 # -*- coding: iso-8859-1 -*-
 from mc.pymc import Run
-from mc.display import *
+from mc.display import *       
+from mc.dsa import Dsa
+
 
 m = Run(node_id       = 1,                            # CANopen node address of the device
         prg_filename  = "Kinco_vel.py",                   # File name of the MPU2 program
@@ -19,13 +21,9 @@ if m:
    # Prepare texts and store them in the device                                              # txt_nr for DispPrintTxt
    # In the MPU program, these texts are called via DispPrintTxt.
    t.AddText( "miControl - DEMO" )                                                           # 0
-#   t.AddText(("Counter  = %-6ld",  m.GlobalVars.Counter))      # (Text, [Output parameter])  # 1
-#   t.AddText(("Counter2 = %ld.%ld", m.GlobalVars.Integer, m.GlobalVars.Fraction))            # 2
-#   t.AddText(("Position = %-6ld",  m.GlobalVars.ActEncPos))                                  # 3
-#   t.AddText(("Buttons  = %-6ld",  m.GlobalVars.Buttons))                                    # 4
-   #t.AddText(("Sidste tilstand = %d",  m.LastState))
-   #t.AddText(("Aktiv tilstands  = %d",  m.State))                                    # 4
+   t.AddText("Sidste tilstand = ")
    t.AddText( "Hello World" )                                    # 4
-
-   t.StoreTexts()                                  # Stores the predefined texts in the device
+ 
+   #t.StoreTexts()                                  # Stores the predefined texts in the device
    m.Prg.Start()                                   # Starts the MPU program
+   print"Starting up..."

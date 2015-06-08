@@ -23,6 +23,7 @@
 #*===========================================================================*#
 from _pymc_builtins_ import *          # Import for simulation on PC
 
+
 # Global variables for program identification ---------------------------------
 AppId       = 0x00000001               # Unique identifier of the application
 AppVersion  = 0x01000000               # Version of the application e.g. 01.00.00.00
@@ -36,10 +37,10 @@ STATE_Init                    = 0
 STATE_Idle                    = 1
 STATE_StartHoming             = 2
 STATE_Wait4HomingDone         = 3
-STATE_Move2Pos1               = 4
-STATE_Wait4PosReached         = 5
+STATE_JogCW                   = 4
+#STATE_Wait4PosReached         = 5
 STATE_Error                   = 6
-STATE_Move2Pos2               = 7
+STATE_JogCCW                  = 7
 STATE_Stop                    = 8
 STATE_Brake                   = 9
 
@@ -182,8 +183,8 @@ def InitPars ():
    Sp(0x3733, 0x00, 10)               # POS_FollowingErrorTime
    Sp(0x373b, 0x00, 10)               # POS_PositionWindowTime
 
-   Sp(0x37b2, 0x00, 1)                # POS_HomingMethod  
-   
+   Sp(0x37b2, 0x00, 1)                # POS_HomingMethod
+
 
 
    Sp(0x3154, 0x00, 255)              # DEV_DoutEnable    241 ###
@@ -202,8 +203,46 @@ counter = 0
 while 1:
    CheckError()                              # Error check at each loop cycle
    CheckInputs()                             # Check of the digital inputs at each loop cycle
+                   
+   # DIN 3, Run CW
+   if din == (1<<3):
+      Sp(0x3004,0, 1)                        # Endstufe aktivieren
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      Sp(0x3000,0x10, 1000)                  # Gerätekommando - Daten0 - Geschwindigkeit
+      Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr
 
-   
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      Sp(0x3150,1,0xff)                      # Set DOUT
+      #DoutP0(0)
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      print"Running CW"
+      
+   # DIN 1, Run CCW
+   elif din == (1<<1):
+      Sp(0x3004,0, 1)                        # Endstufe aktivieren
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      Sp(0x3000,0x10, -1000)                  # Gerätekommando - Daten0 - Geschwindigkeit
+      Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr
+
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      Sp(0x3150,1,0xff)                      # Set DOUT
+      #DoutP0(0)
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      print"Running CCW"
+
+   # DIN 0, Clear Error State
+   elif din == (1<<0):
+      print "Clear Error"
+
+   # Release buttons
+   else:
+         Sp(0x3004,0, 0)                     # Disable power stage
+         if (Cmd != LastCmd) and (Cmd == CMD_BIT_ClearError):
+            Sp(0x3000,0,1)                   # Clear error
+            LastCmd = Cmd                    # Retry until solved ...
+ 
+                   
+
    ### Playground enables toggle between two commands.
    '''
    counter = counter + 1
@@ -214,8 +253,9 @@ while 1:
       counter = 0 # restart
       Cmd =  CMD_BIT_DIN1
    '''
-   ### Playground end 
+   ### Playground end
 
+   '''
    if State == STATE_Init:
       InitPars()
       NextState(STATE_Idle)
@@ -229,36 +269,37 @@ while 1:
             NextState(STATE_StartHoming)     # Homing starten
             LastCmd = Cmd
          if Cmd == CMD_BIT_DIN3:
-            NextState(STATE_Move2Pos1)       # Positionierung CW starten
+            NextState(STATE_JogCW)       # Positionierung CW starten
             LastCmd = Cmd
             #else:
             #   Sp(0x3004,0, 0)              # Disable power section CM###
          if Cmd == CMD_BIT_DIN1:
-            NextState(STATE_Move2Pos2)       # Positionierung CCW starten
+            NextState(STATE_JogCCW)       # Positionierung CCW starten
             DispPrintTxt(1,4, 2)                                     ### Show text 2 in column 1, line 4
             LastCmd = Cmd
          if Cmd == CMD_BIT_DIN0:
             NextState(STATE_Stop)            # Positionierung CCW starten
             LastCmd = Cmd
-            #else:
-            #   Sp(0x3004,0, 0)                 # Disable power section CM###
-   
+      else:
+         Sp(0x3004,0, 0)                 # Disable power section CM###
+
    #---------------------------------------------------------------------------
-   elif State == STATE_Move2Pos1:
+   elif State == STATE_JogCW:
       Sp(0x3004,0, 1)                        # Endstufe aktivieren
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
       Sp(0x3000,0x10, 1000)                  # Gerätekommando - Daten0 - Geschwindigkeit
-      Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr    
-      
-      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
-      Sp(0x3150,1,0xff)                      # Set DOUT    
-      #DoutP0(0)    
-      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
-      
-      NextState(STATE_Wait4PosReached)
+      Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr
 
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+      Sp(0x3150,1,0xff)                      # Set DOUT
+      #DoutP0(0)
+      Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
+
+      #NextState(STATE_Wait4PosReached)
+      NextState(STATE_Idle)
+      
    #---------------------------------------------------------------------------
-   elif State == STATE_Move2Pos2:
+   elif State == STATE_JogCCW:
       Sp(0x3004,0, 1)                        # Endstufe aktivieren
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
       Sp(0x3000,0x10, -1000)                 # Gerätekommando - Daten0 - Geschwindigkeit
@@ -266,23 +307,18 @@ while 1:
 
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
       Sp(0x3150,1,0x00)                      # Clear DOUT
-      #DoutP0(0)    
+      #DoutP0(0)
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
 
-      NextState(STATE_Wait4PosReached)
+      #NextState(STATE_Wait4PosReached)
+      NextState(STATE_Idle)
 
    #---------------------------------------------------------------------------
-   elif State == STATE_Wait4PosReached:
-      if Gp(0x3002,0) & (1<<4):              # Target position reached
-         Cmd = 0                             # Cmd zurücksetzen damit neuer Befehl empfangen werden kann
-         LastCmd = 0                         # LastCmd zurücksetzen damit neuer Befehl empfangen werden kann
-         NextState(STATE_Idle)
-   #---------------------------------------------------------------------------
-   elif State == STATE_Error:
-      if Gp(0x3002,0) & (1<<4):              # Target position reached
-         Cmd = 0                             # Cmd zurücksetzen damit neuer Befehl empfangen werden kann
-         LastCmd = 0                         # LastCmd zurücksetzen damit neuer Befehl empfangen werden kann
-         NextState(STATE_Idle)
+   #¤elif State == STATE_Wait4PosReached:
+   #¤   if Gp(0x3002,0) & (1<<4):              # Target position reached
+   #¤      Cmd = 0                             # Cmd zurücksetzen damit neuer Befehl empfangen werden kann
+   #¤      LastCmd = 0                         # LastCmd zurücksetzen damit neuer Befehl empfangen werden kann
+   #¤      NextState(STATE_Idle)
    #---------------------------------------------------------------------------
    elif State == STATE_Stop:
       #Sp(0x3004,0, 1)                        # Endstufe aktivieren
@@ -306,3 +342,4 @@ while 1:
          if (Cmd != LastCmd) and (Cmd == CMD_BIT_ClearError):
             Sp(0x3000,0,1)                   # Clear error
             LastCmd = Cmd                    # Retry until solved ...
+'''
