@@ -1,0 +1,73 @@
+
+   #- assistance functions --------------------------------------------------------
+   def _mov (d, vel, pos, rel=False):
+      d.SdoWr(0x3300,0, vel)           # Vel
+
+      if rel:
+         d.SdoWr(0x3791,0, pos)        # Movr
+      else:
+         d.SdoWr(0x3790,0, pos)        # Mova
+
+      reached = False
+
+      while not reached:
+         status = d.SdoRd(0x3002,0)
+         if status & (1<<4):           # Target reached ?
+            reached = True
+         elif status & (1<<1):         # Error ?
+            # insert steps to correct error here
+            break
+
+      return reached
+
+   def Mova (d, vel, pos):
+      return _mov(d, vel, pos, False)
+
+   def Movr (d, vel, pos):
+      return _mov(d, vel, pos, True)
+
+
+   def MovCW ():
+      Movr(d, 55, 512000)
+      print "CW #", ButtonRead
+
+
+   def MovCCW ():
+      Movr(d, 55, -512000)
+      print "CCW #", ButtonRead
+
+
+   # Read dig input buttons --------------------------------------------
+   def ReadButtons():
+      bButton = d.SdoRd(0x3120,0)                                 # Read the state of the digital inputs
+      return bButton
+
+
+   #- mainloop ----------------------------------------------------------
+   IdleCount = 0
+   IdleCountOld = 0
+   bReadyCW = 1
+   bReadyCCW = 1
+
+   while 1:
+      ButtonRead = ReadButtons()
+
+      if ButtonRead == 1 and bReadyCW:
+         MovCW()
+         bReadyCW = 0
+         bReadyCCW = 1
+         IdleCount = 0
+
+      if ButtonRead == 2 and bReadyCCW:
+         MovCCW()
+         bReadyCCW = 0
+         bReadyCW = 1
+         IdleCount = 0
+
+      if ButtonRead == 0:
+         IdleCount = IdleCount +1
+         time.sleep(0.2)
+         print "Idle #", IdleCount
+         if IdleCount > 2:
+            bReadyCCW = 1
+            bReadyCW = 1

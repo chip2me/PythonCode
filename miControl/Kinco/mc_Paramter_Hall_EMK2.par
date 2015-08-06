@@ -1,0 +1,1782 @@
+<?xml version="1.0" ?>
+<Parameters>
+   <!-- Copyright(c) 1997-2015 by miControl(R). All rights reserved. -->
+   <AppName Type="str" Value="mcTools"/>
+   <AppVersion Type="str" Value="1.04.00.00"/>
+   <Company Type="str" Value="miControl(R)"/>
+   <Copyright Type="str" Value="Copyright(c) 1997-2015 by miControl(R). All rights reserved."/>
+   <Description Type="str" Value=""/>
+   <FileVersion Type="str" Value="1.00.00.00"/>
+   <Name Type="str" Value="DeviceParameters"/>
+   <TimeStamp Type="str" Value="17.06.2015 13:49:27"/>
+   <Type Type="int" Value="257"/>
+   <Vendor Type="str" Value="miControl(R) GmbH"/>
+   <Version Type="int" Value="256"/>
+   <Device>
+      <Code Type="long" Value="622854145"/>
+      <CustomerCode Type="int" Value="1"/>
+      <CustomerHwOption Type="int" Value="1"/>
+      <CustomerSwOption Type="int" Value="1"/>
+      <InterfaceId Type="none" Value="None"/>
+      <NodeId Type="long" Value="1"/>
+      <VersionHw Type="int" Value="256"/>
+      <VersionSw Type="long" Value="26346752"/>
+      <Pars Type="list">
+         <Par>
+            <Access Type="none" Value="None"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="none" Value="None"/>
+            <Description Type="str" Value=""/>
+            <Index Type="none" Value="None"/>
+            <Name Type="unicode" Value="AppPar_EnableControlPars"/>
+            <Subindex Type="none" Value="None"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="4"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12291"/>
+            <Name Type="unicode" Value="DEV_Mode"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="7"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="7"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="4"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12292"/>
+            <Name Type="unicode" Value="DEV_Enable"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12368"/>
+            <Name Type="unicode" Value="DEV_DinEnable"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12369"/>
+            <Name Type="unicode" Value="DEV_DinClearError"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12370"/>
+            <Name Type="unicode" Value="DEV_DinStartStop"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12373"/>
+            <Name Type="unicode" Value="DEV_DinLimitPos"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12374"/>
+            <Name Type="unicode" Value="DEV_DinLimitNeg"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12375"/>
+            <Name Type="unicode" Value="DEV_DinReference"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12384"/>
+            <Name Type="unicode" Value="DEV_DoutError"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12552"/>
+            <Name Type="unicode" Value="IO_AIN0_Offset"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12554"/>
+            <Name Type="unicode" Value="IO_AIN0_DeadBand"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12628"/>
+            <Name Type="unicode" Value="DEV_DoutEnable"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="241"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="241"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="4"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12800"/>
+            <Name Type="unicode" Value="CURR_DesiredValue"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="10000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12804"/>
+            <Name Type="unicode" Value="CURR_DesiredValue_Source"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="512"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="512"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12805"/>
+            <Name Type="unicode" Value="CURR_DesiredValue_Reference"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12816"/>
+            <Name Type="unicode" Value="CURR_Kp"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="30"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="30"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12817"/>
+            <Name Type="unicode" Value="CURR_Ki"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="30"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="30"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12833"/>
+            <Name Type="unicode" Value="CURR_LimitMaxPos"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="50000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="50000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12835"/>
+            <Name Type="unicode" Value="CURR_LimitMaxNeg"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="50000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="50000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12836"/>
+            <Name Type="unicode" Value="CURR_DynLimitMode"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12836"/>
+            <Name Type="unicode" Value="CURR_DynLimitPeak"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="50000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="50000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12836"/>
+            <Name Type="unicode" Value="CURR_DynLimitCont"/>
+            <Subindex Type="int" Value="2"/>
+            <Value Type="int" Value="50000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="50000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12836"/>
+            <Name Type="unicode" Value="CURR_DynLimitTime"/>
+            <Subindex Type="int" Value="3"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12864"/>
+            <Name Type="unicode" Value="CURR_Acc_dI"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="5000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="5000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12865"/>
+            <Name Type="unicode" Value="CURR_Acc_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="200"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="200"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12866"/>
+            <Name Type="unicode" Value="CURR_Dec_dI"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12867"/>
+            <Name Type="unicode" Value="CURR_Dec_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="200"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="200"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12868"/>
+            <Name Type="unicode" Value="CURR_Dec_QuickStop_dI"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12869"/>
+            <Name Type="unicode" Value="CURR_Dec_QuickStop_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="100"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="100"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="12876"/>
+            <Name Type="unicode" Value="CURR_RampType"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="4"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13056"/>
+            <Name Type="unicode" Value="VEL_DesiredValue"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13058"/>
+            <Name Type="unicode" Value="VEL_ScaleNum"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13059"/>
+            <Name Type="unicode" Value="VEL_ScaleDen"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13060"/>
+            <Name Type="unicode" Value="VEL_DesiredValue_Source"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="768"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="768"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13061"/>
+            <Name Type="unicode" Value="VEL_DesiredValue_Reference"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13066"/>
+            <Name Type="unicode" Value="VEL_DimensionNum"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13067"/>
+            <Name Type="unicode" Value="VEL_DimensionDen"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13072"/>
+            <Name Type="unicode" Value="VEL_Kp"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="500"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="500"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13073"/>
+            <Name Type="unicode" Value="VEL_Ki"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13074"/>
+            <Name Type="unicode" Value="VEL_Kd"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13075"/>
+            <Name Type="unicode" Value="VEL_ILimit"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="5000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="5000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13076"/>
+            <Name Type="unicode" Value="VEL_Kvff"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13077"/>
+            <Name Type="unicode" Value="VEL_Kaff"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13079"/>
+            <Name Type="unicode" Value="VEL_KIxR"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13089"/>
+            <Name Type="unicode" Value="VEL_LimitMaxPos"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="2147483647"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2147483647"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13091"/>
+            <Name Type="unicode" Value="VEL_LimitMaxNeg"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="2147483647"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2147483647"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13120"/>
+            <Name Type="unicode" Value="VEL_Acc_dV"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13121"/>
+            <Name Type="unicode" Value="VEL_Acc_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="300"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="300"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13122"/>
+            <Name Type="unicode" Value="VEL_Dec_dV"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13123"/>
+            <Name Type="unicode" Value="VEL_Dec_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="300"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="300"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13124"/>
+            <Name Type="unicode" Value="VEL_Dec_QuickStop_dV"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13125"/>
+            <Name Type="unicode" Value="VEL_Dec_QuickStop_dT"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="100"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="100"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13132"/>
+            <Name Type="unicode" Value="VEL_RampType"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13136"/>
+            <Name Type="unicode" Value="VEL_Feedback"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="2378"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2378"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13248"/>
+            <Name Type="unicode" Value="VEL_BlockageGuarding_ConfigFlags"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13248"/>
+            <Name Type="unicode" Value="VEL_BlockageGuarding_VelLow"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="-1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13248"/>
+            <Name Type="unicode" Value="VEL_BlockageGuarding_VelHigh"/>
+            <Subindex Type="int" Value="2"/>
+            <Value Type="int" Value="-1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="DEFAULT"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13248"/>
+            <Name Type="unicode" Value="VEL_BlockageGuarding_Time"/>
+            <Subindex Type="int" Value="3"/>
+            <Value Type="int" Value="7"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="7"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="4"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13568"/>
+            <Name Type="unicode" Value="SVEL_DesiredValue"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13570"/>
+            <Name Type="unicode" Value="SVEL_ScaleNum"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13571"/>
+            <Name Type="unicode" Value="SVEL_ScaleDen"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13572"/>
+            <Name Type="unicode" Value="SVEL_DesiredValue_Source"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1280"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1280"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13573"/>
+            <Name Type="unicode" Value="SVEL_DesiredValue_Reference"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13584"/>
+            <Name Type="unicode" Value="SVEL_Kp"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="20"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="20"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13585"/>
+            <Name Type="unicode" Value="SVEL_Ki"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="20"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="20"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13591"/>
+            <Name Type="unicode" Value="SVEL_KIxR"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13601"/>
+            <Name Type="unicode" Value="SVEL_LimitMaxPos"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="65535"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="65535"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13603"/>
+            <Name Type="unicode" Value="SVEL_LimitMaxNeg"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="65535"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="65535"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13648"/>
+            <Name Type="unicode" Value="SVEL_Feedback"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="2378"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2378"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="13729"/>
+            <Name Type="unicode" Value="SVEL_MaxVelRange"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="16383"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="16383"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14112"/>
+            <Name Type="unicode" Value="POS_PositionLimitMin"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="-2147483648"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="-2147483648"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14112"/>
+            <Name Type="unicode" Value="POS_PositionLimitMax"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="2147483647"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2147483647"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14130"/>
+            <Name Type="unicode" Value="POS_FollowingErrorWindow"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14130"/>
+            <Name Type="unicode" Value="POS_FollowingErrorWindowDyn"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="4294967295"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14131"/>
+            <Name Type="unicode" Value="POS_FollowingErrorTime"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="10"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14131"/>
+            <Name Type="unicode" Value="POS_FollowingErrorTimeDyn"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="65535"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14132"/>
+            <Name Type="unicode" Value="POS_FollowingErrorLimit"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="4294967295"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14138"/>
+            <Name Type="unicode" Value="POS_PositionWindow"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="4294967295"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14139"/>
+            <Name Type="unicode" Value="POS_PositionWindowTime"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="10"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14139"/>
+            <Name Type="unicode" Value="POS_PositionWindowTimeout"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="65535"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14140"/>
+            <Name Type="unicode" Value="POS_ReachedConfigFlags"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14156"/>
+            <Name Type="unicode" Value="POS_RampType"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14244"/>
+            <Name Type="unicode" Value="POS_GearBacklashComp_Path"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14244"/>
+            <Name Type="unicode" Value="POS_GearBacklashComp_Vel"/>
+            <Subindex Type="int" Value="2"/>
+            <Value Type="long" Value="100"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="100"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="2"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14258"/>
+            <Name Type="unicode" Value="POS_HomingMethod"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14259"/>
+            <Name Type="unicode" Value="POS_HomingOffset"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14260"/>
+            <Name Type="unicode" Value="POS_HomingVelSwitch"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14260"/>
+            <Name Type="unicode" Value="POS_HomingVelZero"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14261"/>
+            <Name Type="unicode" Value="POS_HomingAcc"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="60000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="60000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14261"/>
+            <Name Type="unicode" Value="POS_HomingDec"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14262"/>
+            <Name Type="unicode" Value="POS_HomingMaxIndexPath"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="2147483647"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2147483647"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14262"/>
+            <Name Type="unicode" Value="POS_HomingIndexOffset"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14263"/>
+            <Name Type="unicode" Value="POS_HomingBlock_ConfigFlags"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14263"/>
+            <Name Type="unicode" Value="POS_HomingBlock_VelLow"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="10"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14263"/>
+            <Name Type="unicode" Value="POS_HomingBlock_VelHigh"/>
+            <Subindex Type="int" Value="2"/>
+            <Value Type="int" Value="-1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="-1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14263"/>
+            <Name Type="unicode" Value="POS_HomingBlock_Time"/>
+            <Subindex Type="int" Value="3"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14263"/>
+            <Name Type="unicode" Value="POS_HomingBlock_FollowingErrorWindow"/>
+            <Subindex Type="int" Value="4"/>
+            <Value Type="int" Value="-1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="-1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14592"/>
+            <Name Type="unicode" Value="MOTOR_Type"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14593"/>
+            <Name Type="unicode" Value="MOTOR_Nn"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="4000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="4000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14594"/>
+            <Name Type="unicode" Value="MOTOR_Un"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="24000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="24000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14608"/>
+            <Name Type="unicode" Value="MOTOR_PolN"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="8"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="8"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14609"/>
+            <Name Type="unicode" Value="MOTOR_Polarity"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="2"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="2"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14690"/>
+            <Name Type="unicode" Value="MOTOR_ENC_Resolution"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="200"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="200"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_Config"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_VelMin"/>
+            <Subindex Type="int" Value="6"/>
+            <Value Type="int" Value="-1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="unicode" Value="OFF"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="3"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_Din"/>
+            <Subindex Type="int" Value="7"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_Dout"/>
+            <Subindex Type="int" Value="8"/>
+            <Value Type="int" Value="-352"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="-352"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_UpBrakeOff"/>
+            <Subindex Type="int" Value="9"/>
+            <Value Type="int" Value="10000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="4"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_UpBrakeOn"/>
+            <Subindex Type="int" Value="10"/>
+            <Value Type="int" Value="8000"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="8000"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OffDelay1"/>
+            <Subindex Type="int" Value="16"/>
+            <Value Type="int" Value="10"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="10"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OffDelay2"/>
+            <Subindex Type="int" Value="17"/>
+            <Value Type="int" Value="20"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="20"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OnDelay1"/>
+            <Subindex Type="int" Value="18"/>
+            <Value Type="int" Value="30"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="30"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OnDelay2"/>
+            <Subindex Type="int" Value="19"/>
+            <Value Type="int" Value="40"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="40"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OffOrConditionFlags"/>
+            <Subindex Type="int" Value="24"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OffAndConditionFlags"/>
+            <Subindex Type="int" Value="25"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OnOrConditionFlags"/>
+            <Subindex Type="int" Value="26"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="6"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="14752"/>
+            <Name Type="unicode" Value="MOTOR_BrakeManagement_OnAndConditionFlags"/>
+            <Subindex Type="int" Value="27"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15104"/>
+            <Name Type="unicode" Value="FCT_Control"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15104"/>
+            <Name Type="unicode" Value="FCT_Precision"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15120"/>
+            <Name Type="unicode" Value="FCT_Polarity"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="2"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15121"/>
+            <Name Type="unicode" Value="FCT_PosNotationIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15122"/>
+            <Name Type="unicode" Value="FCT_PosDimIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="180"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="180"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="2"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15123"/>
+            <Name Type="unicode" Value="FCT_VelNotationIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15124"/>
+            <Name Type="unicode" Value="FCT_VelDimIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="164"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="164"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="2"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15125"/>
+            <Name Type="unicode" Value="FCT_AccNotationIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="0"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="0"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="5"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15126"/>
+            <Name Type="unicode" Value="FCT_AccDimIndex"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="int" Value="176"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="176"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15127"/>
+            <Name Type="unicode" Value="FCT_PosScaleNum"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15127"/>
+            <Name Type="unicode" Value="FCT_PosScaleDen"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15128"/>
+            <Name Type="unicode" Value="FCT_VelScaleNum"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15128"/>
+            <Name Type="unicode" Value="FCT_VelScaleDen"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15129"/>
+            <Name Type="unicode" Value="FCT_GearRatio_MotorRev"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15129"/>
+            <Name Type="unicode" Value="FCT_GearRatio_ShaftRev"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15130"/>
+            <Name Type="unicode" Value="FCT_FeedConstant_Feed"/>
+            <Subindex Type="int" Value="0"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+         <Par>
+            <Access Type="int" Value="3"/>
+            <AppAttr Type="int" Value="0"/>
+            <Comment Type="str" Value=""/>
+            <DType Type="int" Value="7"/>
+            <Description Type="str" Value=""/>
+            <Index Type="int" Value="15130"/>
+            <Name Type="unicode" Value="FCT_FeedConstant_ShaftRev"/>
+            <Subindex Type="int" Value="1"/>
+            <Value Type="long" Value="1"/>
+            <ValueFormat Type="int" Value="0"/>
+            <ValueTxt Type="str" Value="1"/>
+         </Par>
+      </Pars>
+   </Device>
+</Parameters>

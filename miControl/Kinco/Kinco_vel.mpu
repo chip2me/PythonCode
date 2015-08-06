@@ -9,7 +9,7 @@
 # Company  : miControl (R)
 # Compiler : pymc V1.01.00.09
 #
-# Date Time: 08.06.2015 16:09:03
+# Date Time: 18.06.2015 15:09:47
 #==============================================================================
 # Description:   py2mpu-compiler (pymc) generated file         !! DON'T EDIT !!
 #==============================================================================
@@ -17,7 +17,7 @@
 from mc.mpu2 import *                         # Motion Process Unit
 
 _FileFormat_      = 0x00000001
-_FileCrc32_       = 0xF051C1FE
+_FileCrc32_       = 0xE69C677B
 
 _CompilerVersion_ = 0x01010009
 _CompilerFlags_   = 0x00000000
@@ -185,41 +185,41 @@ def MpuProgram (m=None):
    m.Mov (m.Par(0x3000,0x00), 130)
    m.Mov (m.Par(0x3900,0x00), 1)
    m.Mov (m.Par(0x3911,0x00), 2)
-   m.Mov (m.Par(0x3910,0x00), 4)
+   m.Mov (m.Par(0x3910,0x00), 8)
    m.Mov (m.Par(0x3962,0x00), 200)
-   m.Mov (m.Par(0x3901,0x00), 4000)
+   m.Mov (m.Par(0x3901,0x00), 10000)
    m.Mov (m.Par(0x3902,0x00), 24000)
    m.Mov (m.Par(0x3350,0x00), 2378)
-   m.Mov (m.Par(0x3550,0x00), 2378)
-   m.Mov (m.Par(0x3221,0x00), 50000)
-   m.Mov (m.Par(0x3223,0x00), 50000)
-   m.Mov (m.Par(0x3003,0x00), 3)
-   m.Mov (m.Par(0x3200,0x00), 10000)
+   m.Mov (m.Par(0x3550,0x00), 274)
+   m.Mov (m.Par(0x3221,0x00), 35000)
+   m.Mov (m.Par(0x3223,0x00), 35000)
+   m.Mov (m.Par(0x3154,0x00), 241)
    m.Mov (m.Par(0x3210,0x00), 30)
    m.Mov (m.Par(0x3211,0x00), 30)
+   m.Mov (m.Par(0x3224,0x03), 5000)
    m.Mov (m.Par(0x3240,0x00), 5000)
    m.Mov (m.Par(0x3241,0x00), 200)
    m.Mov (m.Par(0x3243,0x00), 200)
-   m.Mov (m.Par(0x3300,0x00), 300)
-   m.Mov (m.Par(0x3310,0x00), 500)
+   m.Mov (m.Par(0x32A0,0x08), -22)
+   m.Mov (m.Par(0x3310,0x00), 10)
+   m.Mov (m.Par(0x3311,0x00), 2)
    m.Mov (m.Par(0x3313,0x00), 5000)
    m.Mov (m.Par(0x3314,0x00), 1000)
-   m.Mov (m.Par(0x3341,0x00), 300)
-   m.Mov (m.Par(0x3343,0x00), 300)
+   m.Mov (m.Par(0x3340,0x00), 1001)
+   m.Mov (m.Par(0x3341,0x00), 151)
+   m.Mov (m.Par(0x3342,0x00), 1001)
+   m.Mov (m.Par(0x3343,0x00), 151)
    m.Mov (m.Par(0x33C0,0x03), 7)
-   m.Mov (m.Par(0x3500,0x00), 1000)
-   m.Mov (m.Par(0x3510,0x00), 20)
-   m.Mov (m.Par(0x3511,0x00), 20)
-   m.Mov (m.Par(0x3517,0x00), 1)
+   m.Mov (m.Par(0x3510,0x00), 450)
+   m.Mov (m.Par(0x3511,0x00), 450)
+   m.Mov (m.Par(0x3517,0x00), 2)
    m.Mov (m.Par(0x3733,0x00), 10)
    m.Mov (m.Par(0x373B,0x00), 10)
-   m.Mov (m.Par(0x37B2,0x00), 1)
-   m.Mov (m.Par(0x3154,0x00), 241)
    m.Mov (m.Par(0x39A0,0x00), 1)
    m.Mov (m.Par(0x39A0,0x10), 10)
-   m.Mov (m.Par(0x39A0,0x11), 20)
-   m.Mov (m.Par(0x39A0,0x12), 30)
-   m.Mov (m.Par(0x39A0,0x13), 40)
+   m.Mov (m.Par(0x39A0,0x11), 10)
+   m.Mov (m.Par(0x39A0,0x12), 10)
+   m.Mov (m.Par(0x39A0,0x13), 10)
    m.Mov (m.Par(0x3003,0x00), 7)
    m.Mov (m.Par(0x3004,0x00), 1)
    m.Ret ()                                  # InitPars END
@@ -235,7 +235,7 @@ def MpuProgram (m=None):
    m.Jz ("_L32_IF_NEXT_", Reg1)
    m.Mov (m.Par(0x3004,0x00), 1)
    m.Mov (m.Par(0x3000,0x01), 0)
-   m.Mov (m.Par(0x3000,0x10), 1000)
+   m.Mov (m.Par(0x3000,0x10), 2333)
    m.Mov (m.Par(0x3000,0x11), 10000)
    m.Mov (m.Par(0x3000,0x01), 52)
    m.Jmp ("_L31_IF_END_")
@@ -245,7 +245,7 @@ def MpuProgram (m=None):
    m.Jz ("_L33_IF_NEXT_", Reg1)
    m.Mov (m.Par(0x3004,0x00), 1)
    m.Mov (m.Par(0x3000,0x01), 0)
-   m.Mov (m.Par(0x3000,0x10), 1000)
+   m.Mov (m.Par(0x3000,0x10), 2333)
    m.Mov (m.Par(0x3000,0x11), -10000)
    m.Mov (m.Par(0x3000,0x01), 52)
    m.Jmp ("_L31_IF_END_")

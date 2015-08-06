@@ -17,6 +17,7 @@
 #* OrderNr. :                                                                *#
 #* Descr.   : Lifting application JOG UP/DOWN including Brake management.    *#
 #*                                                                           *#
+#* History  : 17. juni 2015: Tuning and 8 poles                              *#
 #* History  : 27. maj 2015: Read and react to DIN0=CW, DIN1=CCW              *#
 #* History  : 27. maj 2015: Vel. control new tuning, timer toggle removed.   *#
 #* History  : 20. maj 2015: Cyclic CW/CCW playground.                        *#
@@ -54,6 +55,8 @@ CMD_BIT_DIN0                  = (1<<0) # = 0x01
 CMD_BIT_ClearError            = (1<<0) # = 0x01
 
 DIN_MASK_CMD                  = 0x0F
+
+MOTOR_SPEED_RPM               = 4000
 
 # Global helper variables -----------------------------------------------------
 State                         = STATE_Init
@@ -125,6 +128,145 @@ def InitPars ():
    Sp(0x3900, 0x00, 1)                # MOTOR_Type
    Sp(0x3911, 0x00, 2)                # MOTOR_Polarity
 
+   Sp(0x3910, 0x00, 8)                # MOTOR_PolN
+   Sp(0x3962, 0x00, 200)              # MOTOR_ENC_Resolution
+
+   Sp(0x3901, 0x00, 10000)            # MOTOR_Nn
+   Sp(0x3902, 0x00, 24000)            # MOTOR_Un
+
+   Sp(0x3350, 0x00, 2378)             # VEL_Feedback
+   Sp(0x3550, 0x00, 274)              # SVEL_Feedback
+
+   Sp(0x3221, 0x00, 35000)            # CURR_LimitMaxPos
+   Sp(0x3223, 0x00, 35000)            # CURR_LimitMaxNeg
+
+
+   Sp(0x3154, 0x00, 241)              # DEV_DoutEnable
+
+   Sp(0x3210, 0x00, 30)               # CURR_Kp
+   Sp(0x3211, 0x00, 30)               # CURR_Ki
+
+   Sp(0x3224, 0x03, 5000)             # CURR_DynLimitTime
+
+
+   #Sp(0x3224, 0x00, 1)                # CURR_DynLimitMode
+   #Sp(0x3224, 0x01, 55555)            # CURR_DynLimitPeak
+   #Sp(0x3224, 0x02, 44444)            # CURR_DynLimitCont
+   #Sp(0x3224, 0x03, 5555)             # CURR_DynLimitTime
+
+
+
+
+   Sp(0x3240, 0x00, 5000)             # CURR_Acc_dI
+   Sp(0x3241, 0x00, 200)              # CURR_Acc_dT
+   Sp(0x3243, 0x00, 200)              # CURR_Dec_dT
+
+   Sp(0x32a0, 0x08, -22)              # USER_PAR_Nr1
+
+   Sp(0x3310, 0x00, 10)               # VEL_Kp
+   Sp(0x3311, 0x00, 2)                # VEL_Ki
+   Sp(0x3313, 0x00, 5000)             # VEL_ILimit
+   Sp(0x3314, 0x00, 1000)             # VEL_Kvff
+
+   Sp(0x3340, 0x00, 1001)             # VEL_Acc_dV
+   Sp(0x3341, 0x00, 151)              # VEL_Acc_dT
+   Sp(0x3342, 0x00, 1001)             # VEL_Dec_dV
+   Sp(0x3343, 0x00, 151)              # VEL_Dec_dT
+
+   Sp(0x33c0, 0x03, 7)                # VEL_BlockageGuarding_Time
+
+   Sp(0x3510, 0x00, 450)              # SVEL_Kp
+   Sp(0x3511, 0x00, 450)              # SVEL_Ki
+   Sp(0x3517, 0x00, 2)                # SVEL_KIxR
+
+   Sp(0x3733, 0x00, 10)               # POS_FollowingErrorTime
+   Sp(0x373b, 0x00, 10)               # POS_PositionWindowTime
+
+   Sp(0x39a0, 0x00, 1)                # MOTOR_BrakeManagement_Config
+   Sp(0x39a0, 0x10, 10)               # MOTOR_BrakeManagement_OffDelay1
+   Sp(0x39a0, 0x11, 10)               # MOTOR_BrakeManagement_OffDelay2
+   Sp(0x39a0, 0x12, 10)               # MOTOR_BrakeManagement_OnDelay1
+   Sp(0x39a0, 0x13, 10)               # MOTOR_BrakeManagement_OnDelay2
+
+
+
+
+
+
+
+
+
+
+
+
+   ''' Pre KINCO A
+   Sp(0x3004, 0x00, 0)                # DEV_Enable - Disable
+   Sp(0x3000, 0x00, 1)                # DEV_Cmd - Clear error
+   Sp(0x3000, 0x00, 0x82)             # DEV_Cmd - Default parameter
+
+   Sp(0x3900, 0x00, 1)                # MOTOR_Type
+   Sp(0x3911, 0x00, 2)                # MOTOR_Polarity
+
+   Sp(0x3910, 0x00, 8)                # MOTOR_PolN
+   Sp(0x3962, 0x00, 200)              # MOTOR_ENC_Resolution
+
+   Sp(0x3901, 0x00, 4000)             # MOTOR_Nn
+   Sp(0x3902, 0x00, 24000)            # MOTOR_Un
+
+   Sp(0x3350, 0x00, 2378)             # VEL_Feedback
+   Sp(0x3550, 0x00, 2378)             # SVEL_Feedback
+
+   Sp(0x3221, 0x00, 50000)            # CURR_LimitMaxPos
+   Sp(0x3223, 0x00, 50000)            # CURR_LimitMaxNeg
+
+
+   Sp(0x3154, 0x00, 241)              # DEV_DoutEnable
+
+   Sp(0x3210, 0x00, 30)               # CURR_Kp
+   Sp(0x3211, 0x00, 30)               # CURR_Ki
+
+   Sp(0x3240, 0x00, 5000)             # CURR_Acc_dI
+   Sp(0x3241, 0x00, 200)              # CURR_Acc_dT
+   Sp(0x3243, 0x00, 200)              # CURR_Dec_dT
+
+   Sp(0x3310, 0x00, 500)              # VEL_Kp
+   Sp(0x3313, 0x00, 5000)             # VEL_ILimit
+   Sp(0x3314, 0x00, 1000)             # VEL_Kvff
+
+   Sp(0x3341, 0x00, 300)              # VEL_Acc_dT
+   Sp(0x3343, 0x00, 300)              # VEL_Dec_dT
+
+   Sp(0x33c0, 0x03, 7)                # VEL_BlockageGuarding_Time
+
+   Sp(0x3510, 0x00, 20)               # SVEL_Kp
+   Sp(0x3511, 0x00, 20)               # SVEL_Ki
+   Sp(0x3517, 0x00, 1)                # SVEL_KIxR
+
+   Sp(0x3733, 0x00, 10)               # POS_FollowingErrorTime
+   Sp(0x373b, 0x00, 10)               # POS_PositionWindowTime
+
+   Sp(0x37b2, 0x00, 1)                # POS_HomingMethod
+
+   Sp(0x39a0, 0x00, 1)                # MOTOR_BrakeManagement_Config
+   Sp(0x39a0, 0x10, 10)               # MOTOR_BrakeManagement_OffDelay1
+   Sp(0x39a0, 0x11, 20)               # MOTOR_BrakeManagement_OffDelay2
+   Sp(0x39a0, 0x12, 30)               # MOTOR_BrakeManagement_OnDelay1
+   Sp(0x39a0, 0x13, 40)               # MOTOR_BrakeManagement_OnDelay2
+
+   Sp(0x3b19, 0x00, 318)              # FCT_GearRatio_MotorRev
+   Sp(0x3b19, 0x01, 100)              # FCT_GearRatio_ShaftRev
+   '''
+
+   #
+   ''' OLD INIT PARAMS FROM HERE ...
+   #
+   Sp(0x3004, 0x00, 0)                # DEV_Enable - Disable
+   Sp(0x3000, 0x00, 1)                # DEV_Cmd - Clear error
+   Sp(0x3000, 0x00, 0x82)             # DEV_Cmd - Default parameter
+
+   Sp(0x3900, 0x00, 1)                # MOTOR_Type
+   Sp(0x3911, 0x00, 2)                # MOTOR_Polarity
+
    Sp(0x3910, 0x00, 4)                # MOTOR_PolN
    Sp(0x3962, 0x00, 200)              # MOTOR_ENC_Resolution
 
@@ -180,10 +322,11 @@ def InitPars ():
    Sp(0x39a0, 0x13, 40)               # MOTOR_BrakeManagement_OnDelay2
    #Sp(0x39a0, 0x18, 4)                # MOTOR_BrakeManagement_OffOrConditionFlags
    #Sp(0x39a0, 0x1a, 4)                # MOTOR_BrakeManagement_OnOrConditionFlags
-
+   #
+   '''
+   ### END OF OLD PARAMS HERE ...
    Sp(0x3003, 0x00, 7)                # DEV_Mode
    Sp(0x3004, 0x00, 1)                # DEV_Enable
-
 
 
 # Main program ================================================================
@@ -199,7 +342,7 @@ while 1:
    if din == (1<<3):
       Sp(0x3004,0, 1)                        # Endstufe aktivieren
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
-      Sp(0x3000,0x10, 1000)                  # Gerätekommando - Daten0 - Geschwindigkeit
+      Sp(0x3000,0x10, MOTOR_SPEED_RPM)       # Gerätekommando - Daten0 - Geschwindigkeit
       Sp(0x3000, 0x11, 10000)
       Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr
       print "3"
@@ -208,7 +351,7 @@ while 1:
    elif din == (1<<1):
       Sp(0x3004,0, 1)                        # Endstufe aktivieren
       Sp(0x3000,1,0)                         # Gerätekommando - Ausführbar bei Änderung - Togglekommando
-      Sp(0x3000,0x10, 1000)                 # Gerätekommando - Daten0 - Geschwindigkeit
+      Sp(0x3000,0x10, MOTOR_SPEED_RPM)       # Gerätekommando - Daten0 - Geschwindigkeit
       Sp(0x3000, 0x11, -10000)
       Sp(0x3000,1,0x34)                      # Gerätekommando - Ausführbar bei Änderung - CMD_Movr
       print "1"
