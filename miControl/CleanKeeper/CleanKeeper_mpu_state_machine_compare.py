@@ -20,10 +20,7 @@
 #*===========================================================================*#
 from _pymc_builtins_ import *          # Import for simulation on PC
 
-RUN_TIME = 20  # Seconds
-RUN_SPEED = 51 # RPM
-SCALE = 100
-RUN_DISTANCE = ((RUN_SPEED*SCALE/60)*RUN_TIME*200*256)/SCALE # Pulses for requested run time
+RUN_DISTANCE = 51200                   # Should correspond to 20 seconds run
 
 # Global variables for program identification ---------------------------------
 AppId       = 0x00000001               # Unique identifier of the application
@@ -60,7 +57,7 @@ if not PYMC:
    This allows a simplified diagnosis because "print" commands are possible.
    NOTE: The timing of the program changes since the execution of the Sp()/Gp() functions
    is delayed by the communication between the PC and the device.
-
+   
    If you don't want to use simulation mode, start the program using the Run() function.
    '''
    SpGp_NodeId(1)                      # Set the node id of the device for Sp()/Gp() functions (for simulation mode)
@@ -78,7 +75,7 @@ def DigitalInputFilter(last_din):
    din = Gp(0x3120,0)                                 # Read the state of the digital inputs
    if din != last_din:                                # Check if the input has changed
       time_start = Clock()                            # Read start time for filter
-      while DiffClock(time_start) < InputFilterTime:  # Read state of the digital inputs during InputFilterTime in ms
+      while DiffClock(time_start) < InputFilterTime:  # Read state of the digital inputs during InputFilterTime in ms 
          new_din = Gp(0x3120,0)                       # Read the state of the digital inputs
          if din != new_din:                           # Digital inputs have changed => bouncing? => do not apply a new value for the input!
             break
@@ -107,7 +104,7 @@ def CheckInputs():
 def Mov (vel, pos, rel=False):
    Sp(0x3300,0, vel)           # Vel
    Sp(0x3004,0, 1)                     # Enable power stage
-
+   
    if rel:
       Sp(0x3791,0, pos)        # Movr
    else:
@@ -121,37 +118,21 @@ def Movr (vel, pos):
 
 # Initialization - controller -------------------------------------------------
 def InitPars ():
-   #pass
-   ##print "PREinit"
-
-   #SpGp_NodeId(127)
-   #Sp(0x5000,0, 3)
-
-   #Sp(0x3004, 0x00, 0)                # DEV_Enable - Disable
-   Sp(0x3000, 0x00, 0x1)              # DEV_Cmd - Clear error
-   Sp(0x3000, 0x00, 0x82)             # DEV_Cmd - Default parameter
-   Sp(0x3003, 0x00, 7)                # DEV_Mode
-
-   #Motor data for MotoSmart 23
-   Sp(0x3900, 0x00, 2)                # MOTOR_Type
-   Sp(0x3911, 0x00, 0)                # MOTOR_Polarity
-   Sp(0x3910, 0x00, 200)              # MOTOR_PolN
-   Sp(0x3901, 0x00, 3000)             # MOTOR_Nn
-   Sp(0x3902, 0x00, 12000)            # MOTOR_Un      24000
-   Sp(0x3350, 0x00, 0x0)              # VEL_Feedback
-   Sp(0x3221, 0x00, 10000)            # CURR_LimitMaxPos
-   Sp(0x3223, 0x00, 10000)            # CURR_LimitMaxNeg
-   Sp(0x3210, 0x00, 682)              # CURR_Kp       682
-   Sp(0x3211, 0x00, 64)               # CURR_Ki       64
-   Sp(0x3314, 0x00, 1000)             # VEL_Kvff
-   Sp(0x3830, 0x00, 32000)            # PWM_Frequency 32000
-   Sp(0x3214, 0x00, 400)              # PAR_3214.00h
-   Sp(0x3215, 0x00, 4000)             # PAR_3215.00h
-   Sp(0x3910, 0x01, 256)              # PAR_3910.01h
-
-   Sp(0x3004, 0x00, 1)                # DEV_Enable
-   ##print "post init"
-
+   pass
+   #Sp(0x3004, 0x00, 0)                 # DEV_Enable - Disable
+   #Sp(0x3000, 0x00, 1)                 # DEV_Cmd - Clear error
+   #Sp(0x3000, 0x00, 0x82)              # DEV_Cmd - Default parameter
+   #Sp(0x3900, 0x00, 1)                 # MOTOR_Type
+   #Sp(0x3911, 0x00, 2)                 # MOTOR_Polarity
+   #Sp(0x3910, 0x00, 10)                # MOTOR_PolN
+   #Sp(0x3962, 0x00, 2000)              # MOTOR_ENC_Resolution
+   #Sp(0x3901, 0x00, 3000)              # MOTOR_Nn
+   #Sp(0x3902, 0x00, 24000)             # MOTOR_Un
+   #Sp(0x3350, 0x00, 2410)              # VEL_Feedback
+   #Sp(0x3550, 0x00, 2410)              # SVEL_Feedback
+   #Sp(0x3221, 0x00, 15000)             # CURR_LimitMaxPos
+   #Sp(0x3223, 0x00, 15000)             # CURR_LimitMaxNeg
+   #Sp(0x3003,0,7)                      # PosMode
 
 # Main program ================================================================
 # Main loop -------------------------------------------------------------------
@@ -177,12 +158,12 @@ while 1:
 
    #---------------------------------------------------------------------------
    elif State == STATE_Move2PosCW:
-      Movr(RUN_SPEED, RUN_DISTANCE)
+      Movr(55, 51200)
       NextState(STATE_Wait4Pos)
 
    #---------------------------------------------------------------------------
    elif State == STATE_Move2PosCCW:
-      Movr(RUN_SPEED, -RUN_DISTANCE)
+      Movr(55, -51200)
       NextState(STATE_Wait4Pos)
 
    #---------------------------------------------------------------------------
