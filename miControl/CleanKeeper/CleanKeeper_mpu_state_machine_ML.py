@@ -106,7 +106,7 @@ def CheckInputs():
 #- assistance functions --------------------------------------------------------
 def Mov (vel, pos, rel=False):
    Sp(0x3300,0, vel)           # Vel
-   Sp(0x3004,0, 1)                     # Enable power stage
+   Sp(0x3004,0, 1)             # Enable power stage
 
    if rel:
       Sp(0x3791,0, pos)        # Movr
@@ -127,7 +127,7 @@ def InitPars ():
    #SpGp_NodeId(127)
    #Sp(0x5000,0, 3)
 
-   #Sp(0x3004, 0x00, 0)                # DEV_Enable - Disable
+   #Sp(0x3004, 0x00, 0)               # DEV_Enable - Disable
    Sp(0x3000, 0x00, 0x1)              # DEV_Cmd - Clear error
    Sp(0x3000, 0x00, 0x82)             # DEV_Cmd - Default parameter
    Sp(0x3003, 0x00, 7)                # DEV_Mode
@@ -157,16 +157,35 @@ def InitPars ():
    #MOTOR_PolN        (0x3910,0) = 200
    #MOTOR_Microstepsd (0x3910,1) = 256
 
-   Sp(0x3210, 0x00, 30)               # CURR_Kp      1147
-   Sp(0x3211, 0x00, 3)                # CURR_Ki     501
-   Sp(0x3314, 0x00, 0)             # VEL_Kvff
-   Sp(0x3315, 0x00, 3000)             # _Kaff
-   #Sp(0x3910, 0x01, 3000)              # PAR_3910.01h
+   ### ML4300
+   #CURR_Kp           (0x3210.0) = 338
+   #CURR_Ki           (0x3211.0) = 39
+   #CURR_Kvff         (0x3214.0) = 0
+   #CURR_Kaff         (0x3215.0) = 3300
+   #MOTOR_PolN        (0x3910,0) = 200
+   #MOTOR_Microstepsd (0x3910,1) = 64
 
-   Sp(0x3910, 0x01, 256)              # PAR_3910.01h
-   Sp(0x3004, 0x00, 1)                # DEV_Enable
+
+##Sp(0x3210, 0x00, 3) # 338) #PL=30               # CURR_Kp      1147
+##Sp(0x3211, 0x00, 30)  # 39)  #PL=3              # CURR_Ki     501
+##Sp(0x3314, 0x00, 0)    #PL=0          # VEL_Kvff
+##Sp(0x3315, 0x00, 3000) # 3300)#PL=3000             # _Kaff
+##Sp(0x3910, 0x00, 1)  #1            # PAR_3910.01h        200
+##Sp(0x3910, 0x01, 256)  # 64) #256 # PL=1             # PAR_3910.01h
+##Sp(0x3004, 0x00, 1)                # DEV_Enable
    ##print "post init"
 
+
+###### PL COPY START #######
+   Sp(0x3210, 0x00, 10)    #30           # CURR_Kp      1147
+   Sp(0x3211, 0x00, 1)     #3           # CURR_Ki     501
+   Sp(0x3314, 0x00, 0)     #0           # VEL_Kvff
+   Sp(0x3315, 0x00, 9000)  #3000           # _Kaff
+   Sp(0x3910, 0x00, 200)   #200           # PAR_3910.01h
+
+   Sp(0x3910, 0x01, 256)   #256           # PAR_3910.01h
+   Sp(0x3004, 0x00, 1)     #1           # DEV_Enable
+###### PL COPY END #######
 
 # Main program ================================================================
 # Main loop -------------------------------------------------------------------

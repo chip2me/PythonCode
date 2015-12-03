@@ -29,15 +29,15 @@ import time
 # insert the coorect data according to the steppermotor which is in use
 
 NodeId         = 127       # CAN NodeId of the device
-Up             = 24.0      # Power supply Voltage [V]
+Up             = 12.0      # Power supply Voltage [V]
 
                            # Motor:
-L              = 2*11.5E-3 # Motor-inductance [H]
-R              = 28.2      # Motor-resistance [Ohm]
+L              = 3.7E-3    # Motor-inductance [H] 2*11.5E-3
+R              = 1.1      # Motor-resistance [Ohm]
 
 MotPolN        = 200       # Number of fullsteps per round
 
-Microsteps     = 256       # 256 (default), 128, 64, 32, 16, 8, 4, 2, 1
+Microsteps     = 64       # 256 (default), 128, 64, 32, 16, 8, 4, 2, 1
 Vel            = 100       # velocitiy [rpm]
 
 Pos         = Microsteps*MotPolN*10
@@ -135,7 +135,7 @@ def DigitalInputFilter(last_din):
    din = Gp(0x3120,0)                                 # Read the state of the digital inputs
    if din != last_din:                                # Check if the input has changed
       time_start = Clock()                            # Read start time for filter
-      while DiffClock(time_start) < InputFilterTime:  # Read state of the digital inputs during InputFilterTime in ms 
+      while DiffClock(time_start) < InputFilterTime:  # Read state of the digital inputs during InputFilterTime in ms
          new_din = Gp(0x3120,0)                       # Read the state of the digital inputs
          if din != new_din:                           # Digital inputs have changed => bouncing? => do not apply a new value for the input!
             break
