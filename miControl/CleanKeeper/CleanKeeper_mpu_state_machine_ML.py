@@ -206,12 +206,14 @@ while 1:
 
    #---------------------------------------------------------------------------
    elif State == STATE_Move2PosCW:
-      Movr(RUN_SPEED, RUN_DISTANCE)
+      Movr(RUN_SPEED, RUN_DISTANCE)   
+      print "Now CW"
       NextState(STATE_Wait4Pos)
 
    #---------------------------------------------------------------------------
    elif State == STATE_Move2PosCCW:
       Movr(RUN_SPEED, -RUN_DISTANCE)
+      print "Now CCW"
       NextState(STATE_Wait4Pos)
 
    #---------------------------------------------------------------------------
@@ -239,4 +241,8 @@ while 1:
          NextState(STATE_Idle)
       # Command evaluation -----------------------------------------------------
       else:
-         Sp(0x3004,0, 0)                     # Disable power stage
+         #Sp(0x3004, 0, 0)                    # Disable power stage
+         Sp(0x3000, 0x00, 0x1)               # DEV_Cmd - Clear error
+
+         
+         
